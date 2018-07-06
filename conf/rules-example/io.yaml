@@ -1,0 +1,9 @@
+type: any
+name: Disk IO is high
+index: stats
+alert: email
+
+filter:
+    - query:
+        query_string:
+            query: "io_newvolume_utilization_percent:[80 TO *] OR io_root_utilization_percent:[80 TO *]"

@@ -1,0 +1,9 @@
+type: any
+name: Disk is out of free space
+index: stats
+alert: email
+
+filter:
+    - query:
+        query_string:
+            query: "disk.newvolume_free_inodes_percent:[* TO 10] OR disk.newvolume_free_size_percent:[* TO 10] OR disk.root_free_inodes_percent:[* TO 10] OR disk.root_free_size_percent:[* TO 10]"

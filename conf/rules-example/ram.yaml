@@ -1,0 +1,10 @@
+type: any
+name: RAM is full
+index: stats
+alert: email
+
+filter:
+    - query:
+        query_string:
+            query: "ram_ram_free_percent:[* TO 20] OR ram_swap_free_percent:[* TO 70]"
+

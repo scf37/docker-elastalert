@@ -1,0 +1,9 @@
+type: any
+name: Too many open files
+index: stats
+alert: email
+
+filter:
+    - query:
+        query_string:
+            query: "fd_used:[50000 TO *]"

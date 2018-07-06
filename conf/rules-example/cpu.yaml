@@ -1,0 +1,9 @@
+type: any
+name: Cpu usage is high
+index: stats
+alert: email
+
+filter:
+    - query:
+        query_string:
+            query: "cpu_cpu_used_single_core_percent:[90 TO *] OR cpu_cpu_used_percent:[0 TO *]"

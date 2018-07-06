@@ -1,0 +1,9 @@
+type: any
+name: Some checks are failing
+index: stats
+alert: email
+
+filter:
+    - query:
+        query_string:
+            query: "\\*_status:[1 TO *]"
